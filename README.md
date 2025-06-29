@@ -37,6 +37,7 @@ Aplikasi berbasis web untuk mengelola produk, transaksi penjualan, dan data supp
 
 ---
 
+<<<<<<< HEAD
 ## 🗂️ Struktur Direktori
 
 ├── app.py # Main Flask app
@@ -50,10 +51,16 @@ Aplikasi berbasis web untuk mengelola produk, transaksi penjualan, dan data supp
 
 ---
 
+=======
+>>>>>>> 188ea5c7bd4a702dbe5ee7741bdc94e7ca2307d9
 ## ⚙️ Cara Menjalankan Aplikasi
 
 ### 1. Clone Repo
 
 ```bash
 git clone https://github.com/muzaaqi/tugas-akhir-strtuktur-data.git
+<<<<<<< HEAD
 cd tugas-akhir-strtuktur-data
+=======
+cd tugas-akhir-strtuktur-data
+>>>>>>> 188ea5c7bd4a702dbe5ee7741bdc94e7ca2307d9

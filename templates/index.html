@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manajemen Barang - MUZONE STORE</title>
+    <title> HOME | MUZONE STORE</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/produk.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
 </head>
 <body class="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 min-h-screen">
     <!-- Header -->
@@ -45,14 +45,14 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <!-- Judul Dashboard -->
-        <div class="mb-10  ">
+        <div class="mb-10">
             <h1 class="text-4xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-3">Dashboard Overview</h1>
             <p class="text-gray-600 text-lg">Selamat datang di sistem manajemen gudang MUZONE STORE</p>
         </div>
-
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12">
+            {% if total_produk != 0%}
             <!-- Total Produk Card -->
-            <div class="gradient-border card-hover  ">
+            <div class="gradient-border card-hover">
                 <div class="gradient-border-inner p-8">
                     <div class="flex items-center justify-between">
                         <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/30">
@@ -67,7 +67,7 @@
             </div>
 
             <!-- Total Transaksi Card -->
-            <div class="gradient-border card-hover  ">
+            <div class="gradient-border card-hover">
                 <div class="gradient-border-inner p-8">
                     <div class="flex items-center justify-between">
                         <div class="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center shadow-lg shadow-emerald-500/30">
@@ -82,7 +82,7 @@
             </div>
 
             <!-- Total Supplier Card -->
-            <div class="gradient-border card-hover  ">
+            <div class="gradient-border card-hover">
                 <div class="gradient-border-inner p-8">
                     <div class="flex items-center justify-between">
                         <div class="w-14 h-14 bg-gradient-to-br from-rose-500 to-pink-600 rounded-2xl flex items-center justify-center shadow-lg shadow-rose-500/30">
@@ -95,12 +95,14 @@
                     </div>
                 </div>
             </div>
+            {%else%}
+                <p class="text-gray-600">Belum ada Produk yang terdaftar.</p>
+            {%endif%}
         </div>
 
-        <!-- Content Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <!-- Stok Rendah Section -->
-            <div class=" ">
+            <div>
                 <div class="glass-effect rounded-3xl shadow-2xl shadow-red-100/50 border border-white/20 overflow-hidden">
                     <div class="bg-gradient-to-r from-red-500 to-rose-600 p-6">
                         <div class="flex items-center space-x-3">
@@ -231,20 +233,5 @@
             </div>
         </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="mt-20 mb-0 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div class="text-center">
-                <div class="flex items-center justify-center space-x-3 mb-4">
-                    <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-indigo-600 rounded-lg flex items-center justify-center">
-                        <i class="fas fa-boxes text-white text-sm"></i>
-                    </div>
-                    <h3 class="text-lg font-bold">MUZONE STORE</h3>
-                </div>
-                <p class="text-gray-400 text-sm">© 2025 MUZONE STORE. Sistem Manajemen Gudang.</p>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
